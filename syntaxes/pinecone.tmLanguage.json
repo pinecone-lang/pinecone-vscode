@@ -1,0 +1,39 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pinecone",
+	"patterns": [
+		{
+			"name": "comment.line.double-slash.example",
+			"match": "//.*$"
+		},
+		{
+			"name": "keyword.other.key.example",
+			"match": "^[a-zA-Z0-9_-]+(?=\\s*:\\s*)"
+		},
+		{
+			"name": "storage.type.example",
+			"match": "(?<=:\\s*)[a-zA-Z0-9_-]+(?=\\s*=)"
+		},
+		{
+			"name": "string.quoted.double.example",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.example",
+					"match": "\\\\."
+					}
+			]
+		},
+		{
+			"name": "constant.numeric.integer.example",
+			"match": "(?<=\\s=\\s*)\\d+(?=\\s|$)"
+		},
+		{
+			"name": "constant.numeric.float.example",
+			"match": "(?<=\\s=\\s*)\\d+\\.\\d+(?=\\s|$)"
+		}
+	],
+	"repository": {},
+	"scopeName": "source.pinecone"
+}

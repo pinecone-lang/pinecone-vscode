@@ -1,0 +1,25 @@
+{
+  "name": "pinecone-language-support",
+  "displayName": "Pinecone Language Support",
+  "description": "Syntax highlighting for Pinecone configuration language",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.91.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "pinecone",
+      "aliases": ["Pinecone", "pinecone"],
+      "extensions": [".pc"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "pinecone",
+      "scopeName": "source.pinecone",
+      "path": "./syntaxes/pinecone.tmLanguage.json"
+    }]
+  }
+}
